@@ -25,7 +25,7 @@ Hardware stuff:
 
 ## Let's go!
 
-### Setting up (3 steps)
+### Setting up (4 steps)
 
 1. Make sure to download the Fastled Library developed by Garcia. Open arduino go to Tool->Manage libraries and type 'fastled' and install the latest version. We need this in order to make the ledstrip work on the ESP32 (NEOpixel won't work with it, at least not with me).
 Do the same for the 'arduino_IO' library (this enables us to use example sketches we need to send data to adafruit & zapier)
@@ -33,6 +33,7 @@ Do the same for the 'arduino_IO' library (this enables us to use example sketche
 
 2. [Make an account on Zapier.com](https://zapier.com/app/dashboard)
 3. [Make an account on Adafruit.com](https://www.adafruit.com/)
+4. Make new dashboard at [adafruit IO](https://io.adafruit.com) and Create new 'linechart' block/feed (I named it 'Level')
 
 ### Start coding
 
@@ -52,7 +53,7 @@ Insert:
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
 ```
-Now let's make sure the rest of our inputs and outputs are defined in arduino as well. (make sure that this step's and the previous step's code is written before the `void setup(){}` code
+Now let's make sure the rest of our inputs and outputs are defined in arduino as well. (make sure that this step's and the previous step's code is written before the `void setup(){}` code  
 
 ```C
 #include <elapsedMillis.h>
@@ -60,9 +61,21 @@ elapsedMillis teller1;
 elapsedMillis teller2; 
 
 int piezoPin = D8;
-int vochtSensorpin = A0; //Select the entry of the humiditysensor
-int vochtWaarde =0; // Variabele om de sensorwaarde op te slaan , variable to save the data of the humiditysensor
+int vochtSensorpin = A0; //Select the entry on your ESP32 of the humiditysensor
+int vochtWaarde =0; // variable to save the data of the humiditysensor
 int ingesteld;  // variable to determine the ideal amount of humidity in the plant pot
 ```
+Make sure you set up your Adafruit feed - We will send our humidity data to adafruit
+```C // set up the 'analog' feed
+AdafruitIO_Feed *analog = io.feed("Level");
+```
+And delete ```C
+// this int will hold the current count for our sketch
+int count = 0;
+
+// set up the 'counter' feed
+AdafruitIO_Feed *counter = io.feed("counter");
+```
+
 
 
