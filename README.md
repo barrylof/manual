@@ -164,10 +164,16 @@ for(int i = 0 ; i< NUM_LEDS; i++) {
 //ingesteld = 1000;
 delay (50);
 ```
-Now there are two more steps to do before the code will work properly. 
+### Now there are two more steps to do before the code will work properly. 
+
 These are:
 1. configure your wifi and adafruit connection correctly (let's us send data from the ESP32 to adafruit)
 2. Connect zapier to the correct feed
+
+Let's start with the first one. At the top of your sketch you will notice there is an extra tan that says config.h once you click it. You will see code regarding the ESP32's WiFi connection and connection with your Adafruit account. Fill in the required data between the quotes. See below. I marked my own information red for obvious reasons.
+![](https://github.com/barrylof/manual/blob/master/images/configure-01.png)
+
+
 
 
 
