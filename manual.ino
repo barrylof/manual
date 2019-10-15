@@ -35,12 +35,10 @@ int count = 0;
 AdafruitIO_Feed *noteme = io.feed("calendar1");
 
 void setup() {
-
+noteme->onMessage(handlenotemeMessage);
   // start the serial connection
   Serial.begin(115200);
-
-noteme->onMessage(handlenotemeMessage);
-  // wait for serial monitor to open
+     // wait for serial monitor to open
   while(! Serial);
 
   Serial.print("Connecting to Adafruit IO");

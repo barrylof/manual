@@ -23,7 +23,7 @@
 //#define WIFI_PASS   "!HVAIOT!"
 
 #define WIFI_SSID   "HZN246821721"
-#define WIFI_PASS   "!Ktpzh3rpAmtk!"
+#define WIFI_PASS   "Ktpzh3rpAmtk"
 
 // uncomment the following line if you are using airlift
 // #define USE_AIRLIFT
