@@ -100,7 +100,7 @@ Serial.println(knopWaarde);
 
 //This variable reads the analog sensor data from port 1 on your ESP32
 vochtWaarde = analogRead(vochtSensorpin); 
-//uncomment the codeline below (and uncomment the second last codeline in this sketch) to check if it works when you don't have a button. Led should appear blue and NOT send data to adafruit when vochtwaarde is between 110-1000, and ledstrip will appear red and send data to adafruit when vochtWaarde is below 110.
+//**uncomment the codeline below (and uncomment the second last codeline in this sketch marked with two**) to check if it works when you don't have a button. Led should appear blue and NOT send data to adafruit when vochtwaarde is between 110-1000, and ledstrip will appear red and send data to adafruit when vochtWaarde is below 110.
 //vochtWaarde = 110;
 Serial.print("Vochtigheid aarde is "); Serial.println(vochtWaarde);
 
@@ -160,11 +160,14 @@ for(int i = 0 ; i< NUM_LEDS; i++) {
    
 }
 }
-ingesteld = 1000;
+//**uncomment the line below along for the check i indicated earlier in this sketch. Marked with two**
+//ingesteld = 1000;
 delay (50);
 ```
-
-
+Now there are two more steps to do before the code will work properly. 
+These are:
+1. configure your wifi and adafruit connection correctly (let's us send data from the ESP32 to adafruit)
+2. Connect zapier to the correct feed
 
 
 
