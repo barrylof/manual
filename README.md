@@ -69,7 +69,8 @@ Make sure you set up your Adafruit feed - We will send our humidity data to adaf
 ```C // set up the 'analog' feed
 AdafruitIO_Feed *analog = io.feed("Level");
 ```
-And delete ```C
+And delete
+```C
 // this int will hold the current count for our sketch
 int count = 0;
 
