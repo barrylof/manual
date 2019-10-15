@@ -77,7 +77,7 @@ Serial.println(knopWaarde);
 
 //This variable reads the analog sensor data from port 1 on your ESP32
 vochtWaarde = analogRead(vochtSensorpin); 
-//**uncomment the codeline below (and uncomment the second last codeline in this sketch marked with two**) to check if it works when you don't have a button. Led should appear blue and NOT send data to adafruit when vochtwaarde is between 110-1000, and ledstrip will appear red and send data to adafruit when vochtWaarde is below 110.
+//**uncomment the codeline below (and uncomment the second last codeline in this sketch marked with two**)and comment the singel line above to check if it works when you don't have a button. Led should appear blue and NOT send data to adafruit when vochtwaarde is between 110-1000, and ledstrip will appear red and send data to adafruit when vochtWaarde is below 110.
 //vochtWaarde = 110;
 Serial.print("Vochtigheid aarde is "); Serial.println(vochtWaarde);
 
