@@ -1,7 +1,7 @@
 # IOT Manual
 
 ## We are trying to make Herbie
-Herbie is a smart device that reads the humidity in the soil of your plants. When you've just watered your plans push the button to define the ideal humidity. Once it drops below 30% of it's ideal humidity. Herbie will communicate that your plant(s) are thirsty. Not only will it show you by light but it will also  make an event in your Google calendar to remind you to water your plant(s).
+Herbie is a device that reads the humidity in the soil of your plants. When you've just watered your plans push the button to define the ideal humidity. Once it drops below 10% of it's ideal humidity. Herbie will communicate that your plant(s) are thirsty. Not only will it show you by light but it will also  make an event in your Google calendar to remind you to water your plant(s) the same evening.
 We are making Herbie with an ESP32 Computer
 
 Note: This is an experiment and might not be as good as you wish, it's my first time working with an ESP32 board in arduino
@@ -100,7 +100,7 @@ Serial.println(knopWaarde);
 
 //This variable reads the analog sensor data from port 1 on your ESP32
 vochtWaarde = analogRead(vochtSensorpin); 
-//**uncomment the codeline below (and uncomment the second last codeline in this sketch marked with two**) to check if it works when you don't have a button. Led should appear blue and NOT send data to adafruit when vochtwaarde is between 110-1000, and ledstrip will appear red and send data to adafruit when vochtWaarde is below 110.
+//**uncomment the codeline below (and uncomment the second last codeline in this sketch marked with two**)and comment the singel line above to check if it works when you don't have a button. Led should appear blue and NOT send data to adafruit when vochtwaarde is between 110-1000, and ledstrip will appear red and send data to adafruit when vochtWaarde is below 110.
 //vochtWaarde = 110;
 Serial.print("Vochtigheid aarde is "); Serial.println(vochtWaarde);
 
@@ -180,6 +180,26 @@ Now go to [zapier.com](https://zapier.com/app/zaps) and make a new zap!
 
 You will have to pick an app for the trigger (when this happens...). Here you pick adafruit.
 ![](https://github.com/barrylof/manual/blob/master/images/zapier1-01.png)
+
+The following step requires you to fill in your details about you adafruit account. 
+After this step you zapier wants to know what feed will send data to zapier. This will be the 'Level' feed we made earlier in Adafruit.
+![](https://github.com/barrylof/manual/blob/master/images/zapier2-01.png)
+
+Now it's time to set up the trigger. Pick Google Calendar and fill in that you want to create a detailed event when adafruit sends data.
+![](https://github.com/barrylof/manual/blob/master/images/zapier3-01.png)
+
+Pick your email account and calendars to add the event in.
+Now you are customizing your detailed event, make sure you fill in your summary (I put 'water your plants!') and also your starting time and ending time (I put starting time at 'today 9pm' and ending time 'today 9:15pm' , zapier recognizes some human language in the inputfields)
+After you've filled in your detailed event it should look a bit like this:
+![](https://github.com/barrylof/manual/blob/master/images/zapier4-01.png)
+
+#### The final push!!!
+
+Now just do the test and make sure to turn on your zap and everything should work. 
+
+If you have troubles with the tests in this last proces in zapier, make sure to provide adafruit with some data so it can actually test with your zap. Do this by running the code (or test data in the code, see the comments with two**) on your ESP32. This way it sends data to adafruit that can be used for te zapier tests. Good Luck.
+
+
 
 
 
