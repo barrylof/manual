@@ -1,7 +1,7 @@
 # IOT Manual
 
 ## We are trying to make Herbie
-Herbie is a smart device that reads the humidity in the soil of your plants. When you've just watered your plans push the button to define the ideal humidity. Once it drops below 30% of it's ideal humidity. Herbie will communicate that your plant(s) are thirsty. Not only will it show you by light and sound but it will also  make an event in your Google calendar to remind you to water your plant(s).
+Herbie is a smart device that reads the humidity in the soil of your plants. When you've just watered your plans push the button to define the ideal humidity. Once it drops below 30% of it's ideal humidity. Herbie will communicate that your plant(s) are thirsty. Not only will it show you by light but it will also  make an event in your Google calendar to remind you to water your plant(s).
 We are making Herbie with an ESP32 Computer
 
 Note: This is an experiment and might not be as good as you wish, it's my first time working with an ESP32 board in arduino
@@ -19,10 +19,8 @@ Software stuff:
 
 Hardware stuff:
 * A button
-* A piezo buzzer (for audio)
 * A humidity sensor
 * Ledstrip ( I'm using a WS2811 - with 10 ledlights on it)
-* Infrared moving sensor
 * ESP32
 
 ## Let's go!
@@ -47,13 +45,24 @@ This code is what I standard use to make ledstrip work.
 Insert:
 ```C
 #include <FastLED.h>
-#define LED_PIN     4
+#define LED_PIN     2
 #define BRIGHTNESS  64
 #define NUM_LEDS    10
 #define LED_TYPE    WS2811
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
 ```
+Now let's make sure the rest of our inputs and outputs are defined in arduino as well
 
+```C
+#include <elapsedMillis.h>
+elapsedMillis teller1;
+elapsedMillis teller2; 
+
+int piezoPin = D8;
+int vochtSensorpin = A0; //Select the entry of the humiditysensor
+int vochtWaarde =0; // Variabele om de sensorwaarde op te slaan , variable to save the data of the humiditysensor
+int ingesteld;  // variable to determine the ideal amount of humidity in the plant pot
+```
 
 
