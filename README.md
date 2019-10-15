@@ -24,10 +24,11 @@ Hardware stuff:
 * Infrared moving sensor
 * ESP32
 
-## Setting up
+## Setting up (3 steps)
 
 1. Make sure to download the Fastled Library developed by Garcia. Open arduino go to Tool->Manage libraries and type 'fastled' and install the latest version. We need this in order to make the ledstrip work on the ESP32 (NEOpixel won't work with it, at least not with me).
 Do the same for the 'arduino_IO' library (this enables us to use example sketches we need to send data to adafruit & zapier)
 ![](https://github.com/barrylof/manual/blob/master/images/Library1-01.png)
 
-2. [Make an account on adafruit.com](https://zapier.com/app/dashboard)
+2. [Make an account on Zapier.com](https://zapier.com/app/dashboard)
+3. [Make an account on Adafruit.com](https://www.adafruit.com/)
