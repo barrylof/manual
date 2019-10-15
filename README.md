@@ -41,7 +41,7 @@ First things first, we need to use an exaple provided by the adafruit_IO library
 
 
 Now it's time to include the fastled library, fastled provides us to use simple code to light up the ledstrip. 
-This code is what I standard use to make ledstrip work.
+This code is what I standard use to make ledstrip work. 
 Insert:
 ```C
 #include <FastLED.h>
@@ -52,7 +52,7 @@ Insert:
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
 ```
-Now let's make sure the rest of our inputs and outputs are defined in arduino as well
+Now let's make sure the rest of our inputs and outputs are defined in arduino as well. (make sure that this step's and the previous step's code is written before the `void setup(){}` code
 
 ```C
 #include <elapsedMillis.h>
