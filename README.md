@@ -8,4 +8,17 @@ Note: This is an experiment and might not be as good as you wish
 
 
 ## What do we need?
-* fastled library in arduino (tools-> Manage libraries-> search for fastled by 'Garcia' and install)
+
+Software stuff:
+* The 'fastled' library in arduino (tools-> Manage libraries-> search for fastled by 'Garcia' and install)
+* Adafruit_IO account (Make sure to get your username and key)
+* Zapier
+* Any account that you synchronized your google calendar with
+
+Hardware stuff:
+* A button
+* A piezo buzzer (for audio)
+* A humidity sensor
+* Ledstrip ( I'm using a WS2811 - with 10 ledlights on it)
+* Infrared moving sensor
+* ESP32
