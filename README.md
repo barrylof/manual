@@ -26,3 +26,4 @@ Hardware stuff:
 ## Setting up
 
 Make sure to download the Fastled Library developed by Garcia. Open arduino go to Tool->Manage libraries and type 'fastled' and install the latest version.
+![](https://github.com/barrylof/manual/blob/master/images/Library1-01.png)
