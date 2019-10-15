@@ -8,4 +8,4 @@ Note: This is an experiment and might not be as good as you wish
 
 
 ## What do we need?
-..* fastled library in arduino (tools-> Manage libraries-> search for fastled by 'Garcia' and install)
+* fastled library in arduino (tools-> Manage libraries-> search for fastled by 'Garcia' and install)
