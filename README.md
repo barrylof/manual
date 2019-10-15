@@ -167,11 +167,21 @@ delay (50);
 ### Now there are two more steps to do before the code will work properly. 
 
 These are:
-1. configure your wifi and adafruit connection correctly (let's us send data from the ESP32 to adafruit)
+1. Configure your wifi and adafruit connection correctly (let's us send data from the ESP32 to adafruit)
 2. Connect zapier to the correct feed
 
-Let's start with the first one. At the top of your sketch you will notice there is an extra tan that says config.h once you click it. You will see code regarding the ESP32's WiFi connection and connection with your Adafruit account. Fill in the required data between the quotes. See below. I marked my own information red for obvious reasons.
+#### Let's start with the first one. 
+At the top of your sketch you will notice there is an extra tab that says config.h once you click it. You will see code regarding the ESP32's WiFi connection and connection with your Adafruit account. Fill in the required data between the quotes. See below. I marked my own information red for obvious reasons.
 ![](https://github.com/barrylof/manual/blob/master/images/configure-01.png)
+
+#### Now the last step
+If you followed step 4 of 'setting up' you should have made a new dashboard with a linechart feed called 'Level'.
+Now go to [zapier.com](https://zapier.com/app/zaps) and make a new zap!
+
+You will have to pick an app for the trigger (when this happens...). Here you pick adafruit.
+![](https://github.com/barrylof/manual/blob/master/images/zapier1-01.png)
+
+
 
 
 
