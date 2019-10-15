@@ -14,7 +14,7 @@ Software stuff:
 * The 'fastled' library in arduino (tools-> Manage libraries-> search 'fastled' by 'Garcia' and install)
 * Adafruit_IO library (Also to find in tools->Manage libraries)
 * Adafruit_IO account (Make sure to get your username and key)
-* Zapier
+* Zapier account
 * Any account that you synchronized your google calendar with
 
 Hardware stuff:
@@ -41,6 +41,19 @@ Do the same for the 'arduino_IO' library (this enables us to use example sketche
 First things first, we need to use an exaple provided by the adafruit_IO library. The example we are looking for is the top one called 'adafruitio_00_publish'. Go to files->examples and search Adafruit IO Arduino. See below
 ![](https://github.com/barrylof/manual/blob/master/images/examplepubleish-01.png)
 
+
+Now it's time to include the fastled library, fastled provides us to use simple code to light up the ledstrip. 
+This code is what I standard use to make ledstrip work.
+Insert:
+```C
+#include <FastLED.h>
+#define LED_PIN     4
+#define BRIGHTNESS  64
+#define NUM_LEDS    10
+#define LED_TYPE    WS2811
+#define COLOR_ORDER GRB
+CRGB leds[NUM_LEDS];
+```
 
 
 
