@@ -10,7 +10,8 @@ Note: This is an experiment and might not be as good as you wish, it's my first 
 ## What do we need?
 
 Software stuff:
-* The 'fastled' library in arduino (tools-> Manage libraries-> search for fastled by 'Garcia' and install)
+* The 'fastled' library in arduino (tools-> Manage libraries-> search 'fastled' by 'Garcia' and install)
+* Adafruit_IO library (Also to find in tools->Manage libraries)
 * Adafruit_IO account (Make sure to get your username and key)
 * Zapier
 * Any account that you synchronized your google calendar with
@@ -25,5 +26,8 @@ Hardware stuff:
 
 ## Setting up
 
-Make sure to download the Fastled Library developed by Garcia. Open arduino go to Tool->Manage libraries and type 'fastled' and install the latest version.
+1. Make sure to download the Fastled Library developed by Garcia. Open arduino go to Tool->Manage libraries and type 'fastled' and install the latest version. We need this in order to make the ledstrip work on the ESP32 (NEOpixel won't work with it, at least not with me).
+Do the same for the 'arduino_IO' library (this enables us to use example sketches we need to send data to adafruit & zapier)
 ![](https://github.com/barrylof/manual/blob/master/images/Library1-01.png)
+
+2. [Make an account on adafruit.com](https://zapier.com/app/dashboard)
